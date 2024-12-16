@@ -1,5 +1,5 @@
 """
-URL configuration for firstproject project.
+URL configuration for secondproject project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -17,14 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-## Importing the views file from testapp package
-from testapp import views
+## importing the views package
+from timeapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
-    ## Adding the URL-Pattern for our newly created view
-    path('hello/', views.display)
-    ## Here, "greeting/" is the url-patterns used by End User
-    ## views.display is the function which gets called
+    path('time/', views.time_info)
 ]

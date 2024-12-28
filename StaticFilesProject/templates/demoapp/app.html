@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!-- This is to load STATIC FILES -->
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Application</title>
+    <!-- This is to INCLUDE CSS File using Template tags -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1> {{main_msg}} </h1>
+    <ul>
+        <li> {{sub_msg1}} </li>
+        <li> {{sub_msg2}} </li>
+        <li> {{sub_msg3}} </li>
+        <li> {{sub_msg4}} </li>
+    </ul>
+</body>
+</html>

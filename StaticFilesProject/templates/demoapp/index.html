@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- This is to load STATIC FILES -->
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Application</title>
+
+    <!-- This is to INCLUDE CSS File using Template tags -->
+     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Welcome to YEARLY NEWS</h1>
+    <img src="{% static 'images/DP.jpeg' %}" alt="Daily Planet News Picture">
+    <ul>
+        <li>
+            <a href="/movies">Movies News</a>
+        </li>
+        <li>
+            <a href="/sports">Sports News</a>
+        </li>
+        <li>
+            <a href="#">Tech News News</a>
+        </li>
+    </ul>
+</body>
+</html>

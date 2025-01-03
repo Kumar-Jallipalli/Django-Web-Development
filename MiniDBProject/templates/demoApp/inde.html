@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Data</title>
+</head>
+<body>
+    <h1>Employee Data</h1>
+    <hr>
+    <!-- Using Jinja2 Syntax to Access the DB data from Views.py file -->
+     <h3>
+        {% if empdata %}
+        <table border="2">
+            <thead>
+                <th>E_NO</th>
+                <th>E_NAME</th>
+                <th>E_SAL</th>
+                <th>E_ADDR</th>
+            </thead>
+            {% for emp in empdata %}
+            <tbody>
+                <td>{{emp.eNo}}</td>
+                <td>{{emp.eName}}</td>
+                <td>{{emp.eSal}}</td>
+                <td>{{emp.eAdd}}</td>
+            </tbody>
+            {% endfor %}
+        </table>
+        {%else%}
+        No DATA found...!
+        {%endif%}
+     </h3>
+</body>
+</html>

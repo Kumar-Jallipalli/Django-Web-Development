@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Data</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Student Information Page</h1>
+    <hr>
+    {% if data %}
+        {% for i in data %}
+        <h2>{{i.name}} Info</h2>
+        <ul>
+            <li>Roll No. : {{i.roll_no}}</li>
+            <li>D.O.B. : {{i.dob}}</li>
+            <li>Marks : {{i.marks}}</li>
+            <li>Phone No. : {{i.phone_no}}</li>
+            <li>Email : {{i.email}}</li>
+            <li>Address : {{i.address}}</li>
+        </ul>
+        {% endfor %}
+    {% else %}
+        <h3>No Record found..</h3>
+    {% endif %}
+</body>
+</html>

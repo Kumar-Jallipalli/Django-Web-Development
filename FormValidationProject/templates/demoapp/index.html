@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    {% if is_submitted == True %}
+        <h1>Hi {{name}}, <br>Thanks for your FEEDBACK..</h1>
+    {% else %}
+        <h1>Employee Feedback Form</h1>
+        <div>
+            <form method="POST">
+                {{ form }}
+                {% csrf_token %}
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    {% endif %}
+</body>
+</html>
